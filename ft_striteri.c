@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/07 13:46:57 by flee              #+#    #+#             */
-/*   Updated: 2022/06/27 12:21:06 by flee             ###   ########.fr       */
+/*   Created: 2022/06/27 11:44:21 by flee              #+#    #+#             */
+/*   Updated: 2022/06/27 12:16:57 by flee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int character)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (character >= 32 && character <= 126)
-		return (1);
-	else
-		return (0);
+	unsigned int	i;
+
+	i = 0;
+	if (s)
+	{
+		while (*s)
+		{
+			f(i, s);
+			s++;
+			i++;
+		}
+	}
 }

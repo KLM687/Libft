@@ -6,13 +6,13 @@
 /*   By: flee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/07 13:43:46 by flee              #+#    #+#             */
-/*   Updated: 2021/06/08 13:59:05 by flee             ###   ########.fr       */
+/*   Updated: 2022/06/27 12:17:21 by flee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int 	ft_isascii(int character)
+int	ft_isascii(int character)
 {
 	if (character >= 0 && character <= 127)
 		return (1);
